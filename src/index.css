@@ -1,0 +1,173 @@
+.body{
+  background-image: url('images/pic1.jpeg');
+  background-blend-mode: multiply;
+  overflow-y: hidden ;
+  background-color: #640ba4cf; 
+  background-position: center;
+  height: 100vh; 
+position: relative;
+background-attachment: fixed;
+}
+
+.off{
+  background-color: rgb(16, 21, 66);
+  color: white;
+}
+
+.mylinks a{
+  color: white;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif; 
+  
+}
+
+.alllinks{
+  margin-right: 60px;
+}
+
+.btn1{
+
+  width: 150px;
+  height : 50px;
+  font : 35px;
+
+}
+.homie{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; 
+  font-size: 30px;
+}
+
+.in{
+  width: 500px;
+  border-radius: 10px;
+  
+}
+
+.btn2{
+  border-radius: 7px;
+  background-color: #5734f3;
+  color: white;
+  margin-left: 35px;
+}
+.mtitle{
+  color: white;
+  font-size: 30px;
+}
+
+.prams{
+  margin-top: 30px;
+}
+
+.rform, label{
+
+  color: white;
+  margin-top: 40px;
+}
+
+.rform, input{
+
+  width : 500px;
+  margin-left: 300px;
+  background-color: #007bff87;
+  color: white;
+  border-color: white;
+  
+
+}
+
+/* CSS for form container */
+.rform {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ 
+}
+
+.list{
+  color: white;
+  border: 1px solid #cd0505;
+  border-radius: 80px;
+  
+  padding: 60px;
+  margin: 10px;
+  width: 250px;
+  background-color: #e07b7b56;
+}
+
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+.form-input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-inputt {
+  width: 80%;
+  height: 15vh;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #007bff56;
+}
+
+
+.form-submit {
+  width: 40%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+ .mlist{
+ 
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mtitle{
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.error{
+  color: rgb(255, 0, 0);
+  margin-left: 40rem;
+  margin-top: 15rem;
+
+}
+
+.error , p{
+  font-size: 30px;
+}
+
+.cardstyle{
+  margin-left: 10px;
+  margin-top: 30px;
+}
