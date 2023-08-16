@@ -1,34 +1,36 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom'
+
+
+import {Link,useLocation} from 'react-router-dom'
 
 const Params = () => {
   const { id } = useParams();
   console.log(id);
-  const [movie, setMovie] = useState({}); // Change to an object
+const {state:movie} =useLocation()
+console.log(location);
+  // const [movie, setMovie] = useState({}); // Change to an object
 
-  const fetchMovie = async () => {
-    try {
-      const response = await axios.get(`http://localhost:3000/movie/${id}`); // Fetch a single movie by ID
-      const data = await response.data;
-      setMovie(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const fetchMovie = async () => {
+  //   try {
+  //     const response = await axios.get(`http://localhost:3000/movie/${id}`); // Fetch a single movie by ID
+  //     const data = await response.data;
+  //     setMovie(data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchMovie();
-  },[id]); // Trigger fetchMovie whenever the id parameter changes
+  // useEffect(() => {
+  //   fetchMovie();
+  // },[id]); // Trigger fetchMovie whenever the id parameter changes
 
   return (
-    <div > 
+    <div className='params' > 
       <Container >
         <Row >
           <Col>
-            <img src={movie.url} alt='mov' /> {/* Correct 'image' to 'img' */}
+            <img  className='pimg' src={movie.url} alt='mov' /> {/* Correct 'image' to 'img' */}
           </Col>
 
           <Col className='Prams'> 

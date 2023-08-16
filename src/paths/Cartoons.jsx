@@ -3,10 +3,13 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { Container , Col ,Row} from "react-bootstrap"
 import {Card} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Cartoons= () => {
+    const navigate =useNavigate()
+
  
   const[movies , setMovies]=useState([]);
 
@@ -15,9 +18,11 @@ const Cartoons= () => {
   const fetchMovies = async () => {
       try {
 
-          const response = await axios.get("http://localhost:3000/cartoons");
+          const response = await axios.get('../../movies.json');
           const data = await response.data;
-           setMovies(data);
+          console.log(data)
+           setMovies(data.cartoons);
+         
          
           
       } catch (error) {
@@ -34,25 +39,23 @@ const Cartoons= () => {
       },[])
   
 return (
-  <div>
+  <div className='cartoons'>
       
-      <Container>
+      <Container >
       <h1>New Release</h1>
           <Row>
           
-              { movies.map((movie)=>(
-                  <Col key={movie.id} xs={12} md={2}>
-                 <Link to={`/params/${movie.id}`} className="overflow-hidden">   
+              { movies.map((movie, idx)=>(
+                  <Col key={movie.id + idx } xs={12} md={2}>
+                  
                  
-                       <Card style={{ width: '12rem' }}>
+                       <Card  className='cardstyle'  style={{ width: '12rem' }}
+                       onClick={()=>{navigate(`/params/${movie.id}`,{state:movie})}}>
               <Card.Img variant="top" src={movie.url} alt="movieImage" />
-              <Card.Body>
-            
-                
-              </Card.Body>
+              
               
             </Card>
-            </Link>
+           
                   
                   </Col>
               ))

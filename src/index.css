@@ -4,7 +4,8 @@
   overflow-y: hidden ;
   background-color: #640ba4cf; 
   background-position: center;
-  height: 100vh; 
+
+ 
 position: relative;
 background-attachment: fixed;
 }
@@ -37,7 +38,7 @@ background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; 
+  height: 100vh; 
   font-size: 30px;
 }
 
@@ -102,6 +103,7 @@ background-attachment: fixed;
   margin: 10px;
   width: 250px;
   background-color: #e07b7b56;
+  width: 400px;
 }
 
 
@@ -128,6 +130,7 @@ background-attachment: fixed;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #007bff56;
+  color: #fff;
 }
 
 
@@ -144,7 +147,7 @@ background-attachment: fixed;
 
  .mlist{
  
- 
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -170,4 +173,17 @@ background-attachment: fixed;
 .cardstyle{
   margin-left: 10px;
   margin-top: 30px;
+}
+.cartoons{
+
+  height: 100vh;
+
+}
+.params{
+  height: 100vh;
+}
+
+.pimg{
+  height: 800px;
+  width: 600px;
 }

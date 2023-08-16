@@ -1,5 +1,5 @@
 
-import Reviewlist from "../components/Reviewlist";
+
 
 
 const Home = () => {
